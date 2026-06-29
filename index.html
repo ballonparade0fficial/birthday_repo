@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Happy Birthday Vauju! 🎂</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- ── Background canvas layers ── -->
+        <canvas id="stars-canvas"></canvas>
+        <canvas id="balloon-canvas"></canvas>
+        <canvas id="firework-canvas"></canvas>
+        <canvas id="confetti-canvas"></canvas>
+
+        <!-- ══════════ LEFT FLOWERS ══════════ -->
+        <!--
+    All viewBoxes include extra vertical space so leaves never get clipped.
+    "overflow: visible" in the CSS is an additional guard.
+  -->
+        <div class="flowers-left">
+            <!-- Rose -->
+            <svg
+                class="flower-svg"
+                viewBox="0 0 60 68"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g transform="translate(30,30)">
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#e8336b"
+                        opacity=".9"
+                        transform="rotate(0)   translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#f0557f"
+                        opacity=".85"
+                        transform="rotate(72)  translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#e8336b"
+                        opacity=".9"
+                        transform="rotate(144) translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#f0557f"
+                        opacity=".85"
+                        transform="rotate(216) translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#e8336b"
+                        opacity=".9"
+                        transform="rotate(288) translate(0,-10)"
+                    />
+                    <circle r="9" fill="#ff85a1" />
+                    <circle r="5" fill="#ffd6e0" />
+                </g>
+                <!-- Stem -->
+                <line
+                    x1="30"
+                    y1="52"
+                    x2="30"
+                    y2="62"
+                    stroke="#2d7a2d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+                <!-- Leaf -->
+                <ellipse
+                    cx="22"
+                    cy="58"
+                    rx="9"
+                    ry="5"
+                    fill="#3a9a3a"
+                    transform="rotate(-30,22,58)"
+                />
+            </svg>
+
+            <!-- Daisy -->
+            <svg
+                class="flower-svg"
+                viewBox="0 0 60 65"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g transform="translate(30,28)">
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#fff8dc"
+                        opacity=".95"
+                        transform="rotate(0)   translate(0,-12)"
+                    />
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#ffe066"
+                        opacity=".9"
+                        transform="rotate(45)  translate(0,-12)"
+                    />
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#fff8dc"
+                        opacity=".95"
+                        transform="rotate(90)  translate(0,-12)"
+                    />
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#ffe066"
+                        opacity=".9"
+                        transform="rotate(135) translate(0,-12)"
+                    />
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#fff8dc"
+                        opacity=".95"
+                        transform="rotate(180) translate(0,-12)"
+                    />
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#ffe066"
+                        opacity=".9"
+                        transform="rotate(225) translate(0,-12)"
+                    />
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#fff8dc"
+                        opacity=".95"
+                        transform="rotate(270) translate(0,-12)"
+                    />
+                    <ellipse
+                        rx="6"
+                        ry="13"
+                        fill="#ffe066"
+                        opacity=".9"
+                        transform="rotate(315) translate(0,-12)"
+                    />
+                    <circle r="9" fill="#ffb700" />
+                    <circle r="5" fill="#ffd740" />
+                </g>
+                <!-- Stem with a small leaf -->
+                <line
+                    x1="30"
+                    y1="52"
+                    x2="30"
+                    y2="63"
+                    stroke="#2d7a2d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+                <ellipse
+                    cx="38"
+                    cy="59"
+                    rx="8"
+                    ry="4"
+                    fill="#3a9a3a"
+                    transform="rotate(25,38,59)"
+                />
+            </svg>
+
+            <!-- Tulip -->
+            <svg
+                class="flower-svg"
+                viewBox="0 0 60 68"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M30 8 Q18 14 18 28 Q18 42 30 46 Q42 42 42 28 Q42 14 30 8Z"
+                    fill="#d63aff"
+                />
+                <path
+                    d="M30 8 Q26 18 26 30 Q28 40 30 46 Q32 40 34 30 Q34 18 30 8Z"
+                    fill="#e870ff"
+                />
+                <!-- Stem -->
+                <line
+                    x1="30"
+                    y1="46"
+                    x2="30"
+                    y2="62"
+                    stroke="#2d7a2d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+                <!-- Leaf -->
+                <ellipse
+                    cx="22"
+                    cy="57"
+                    rx="9"
+                    ry="5"
+                    fill="#3a9a3a"
+                    transform="rotate(-25,22,57)"
+                />
+            </svg>
+        </div>
+        <!-- /flowers-left -->
+
+        <!-- ══════════ RIGHT FLOWERS ══════════ -->
+        <div class="flowers-right">
+            <!-- Sunflower -->
+            <svg
+                class="flower-svg"
+                viewBox="0 0 60 65"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g transform="translate(30,28)">
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffb300"
+                        opacity=".92"
+                        transform="rotate(0)   translate(0,-11)"
+                    />
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffd740"
+                        opacity=".88"
+                        transform="rotate(45)  translate(0,-11)"
+                    />
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffb300"
+                        opacity=".92"
+                        transform="rotate(90)  translate(0,-11)"
+                    />
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffd740"
+                        opacity=".88"
+                        transform="rotate(135) translate(0,-11)"
+                    />
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffb300"
+                        opacity=".92"
+                        transform="rotate(180) translate(0,-11)"
+                    />
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffd740"
+                        opacity=".88"
+                        transform="rotate(225) translate(0,-11)"
+                    />
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffb300"
+                        opacity=".92"
+                        transform="rotate(270) translate(0,-11)"
+                    />
+                    <ellipse
+                        rx="7"
+                        ry="14"
+                        fill="#ffd740"
+                        opacity=".88"
+                        transform="rotate(315) translate(0,-11)"
+                    />
+                    <circle r="11" fill="#7b3f00" />
+                    <circle r="7" fill="#5a2d00" />
+                </g>
+                <!-- Stem with a leaf -->
+                <line
+                    x1="30"
+                    y1="52"
+                    x2="30"
+                    y2="63"
+                    stroke="#2d7a2d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+                <ellipse
+                    cx="22"
+                    cy="58"
+                    rx="8"
+                    ry="4"
+                    fill="#3a9a3a"
+                    transform="rotate(-20,22,58)"
+                />
+            </svg>
+
+            <!-- Pink Rose -->
+            <svg
+                class="flower-svg"
+                viewBox="0 0 60 68"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g transform="translate(30,30)">
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#ff6eb4"
+                        opacity=".9"
+                        transform="rotate(0)   translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#ff9ad0"
+                        opacity=".85"
+                        transform="rotate(72)  translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#ff6eb4"
+                        opacity=".9"
+                        transform="rotate(144) translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#ff9ad0"
+                        opacity=".85"
+                        transform="rotate(216) translate(0,-10)"
+                    />
+                    <ellipse
+                        rx="9"
+                        ry="14"
+                        fill="#ff6eb4"
+                        opacity=".9"
+                        transform="rotate(288) translate(0,-10)"
+                    />
+                    <circle r="9" fill="#ffb0d8" />
+                    <circle r="5" fill="#ffe0f0" />
+                </g>
+                <!-- Stem -->
+                <line
+                    x1="30"
+                    y1="52"
+                    x2="30"
+                    y2="62"
+                    stroke="#2d7a2d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+                <!-- Leaf -->
+                <ellipse
+                    cx="38"
+                    cy="58"
+                    rx="9"
+                    ry="5"
+                    fill="#3a9a3a"
+                    transform="rotate(25,38,58)"
+                />
+            </svg>
+
+            <!-- Lavender -->
+            <svg
+                class="flower-svg"
+                viewBox="0 0 60 65"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <!-- Stem -->
+                <line
+                    x1="30"
+                    y1="32"
+                    x2="30"
+                    y2="63"
+                    stroke="#2d7a2d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+                <!-- Leaf -->
+                <ellipse
+                    cx="22"
+                    cy="52"
+                    rx="8"
+                    ry="4"
+                    fill="#3a9a3a"
+                    transform="rotate(-20,22,52)"
+                />
+                <!-- Blooms -->
+                <g transform="translate(30,10)">
+                    <ellipse
+                        rx="5"
+                        ry="10"
+                        fill="#b57bee"
+                        transform="rotate(-20) translate(-6,-8)"
+                    />
+                    <ellipse
+                        rx="5"
+                        ry="10"
+                        fill="#c98df5"
+                        transform="rotate(-8)  translate(-2,-10)"
+                    />
+                    <ellipse
+                        rx="5"
+                        ry="10"
+                        fill="#b57bee"
+                        transform="rotate(8)   translate(2,-10)"
+                    />
+                    <ellipse
+                        rx="5"
+                        ry="10"
+                        fill="#c98df5"
+                        transform="rotate(20)  translate(6,-8)"
+                    />
+                    <ellipse
+                        rx="5"
+                        ry="8"
+                        fill="#d4a8f8"
+                        transform="translate(0,-11)"
+                    />
+                </g>
+            </svg>
+        </div>
+        <!-- /flowers-right -->
+
+        <!-- ══════════ MAIN SCENE ══════════ -->
+        <div class="scene">
+            <!-- Title -->
+            <div class="title-block">
+                <span class="title-main">Happy Birthday</span>
+                <span class="title-name">Vauju!</span>
+                <div class="title-deco">
+                    <span>🌸</span>
+                    <!-- mini inline cake SVG -->
+                    <svg
+                        class="title-cake-svg"
+                        viewBox="0 0 48 38"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <!-- bottom tier -->
+                        <rect
+                            x="4"
+                            y="22"
+                            width="40"
+                            height="16"
+                            rx="4"
+                            fill="#fb923c"
+                        />
+                        <!-- top tier -->
+                        <rect
+                            x="12"
+                            y="12"
+                            width="24"
+                            height="12"
+                            rx="4"
+                            fill="#ff7eb9"
+                        />
+                        <!-- frosting drip top tier -->
+                        <path
+                            d="M12,12 Q18,7 24,12 Q30,7 36,12"
+                            fill="none"
+                            stroke="#fff"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                        />
+                        <!-- frosting drip bottom tier -->
+                        <path
+                            d="M4,22 Q12,17 20,22 Q28,17 36,22 Q40,19 44,22"
+                            fill="none"
+                            stroke="#fff"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                        />
+                        <!-- candles -->
+                        <rect
+                            x="19"
+                            y="3"
+                            width="3"
+                            height="10"
+                            rx="1"
+                            fill="#ffd700"
+                        />
+                        <rect
+                            x="26"
+                            y="1"
+                            width="3"
+                            height="12"
+                            rx="1"
+                            fill="#d63aff"
+                        />
+                        <!-- flames -->
+                        <ellipse
+                            cx="20.5"
+                            cy="2.5"
+                            rx="2.2"
+                            ry="2.8"
+                            fill="#ff8c00"
+                        />
+                        <ellipse
+                            cx="20.5"
+                            cy="2.2"
+                            rx="1"
+                            ry="1.5"
+                            fill="#fffde0"
+                        />
+                        <ellipse
+                            cx="27.5"
+                            cy="0.5"
+                            rx="2.2"
+                            ry="2.8"
+                            fill="#ff4500"
+                        />
+                        <ellipse
+                            cx="27.5"
+                            cy="0.2"
+                            rx="1"
+                            ry="1.5"
+                            fill="#fffde0"
+                        />
+                    </svg>
+                    <span>🌸</span>
+                </div>
+            </div>
+
+            <!-- Cake -->
+            <div class="cake-wrapper">
+                <div class="cake">
+                    <!-- Top tier -->
+                    <div class="tier tier-top" id="tier-top">
+                        <div class="frosting-band"></div>
+                        <div class="drip" id="drip-top"></div>
+                        <div class="pearl-row" id="pearls-top"></div>
+                        <div class="dot-border" id="dots-top"></div>
+                    </div>
+
+                    <!-- Middle tier -->
+                    <div class="tier tier-mid" id="tier-mid">
+                        <div class="frosting-band"></div>
+                        <div class="drip" id="drip-mid"></div>
+                        <div class="pearl-row" id="pearls-mid"></div>
+                        <div class="dot-border" id="dots-mid"></div>
+                    </div>
+
+                    <!-- Bottom tier -->
+                    <div class="tier tier-bottom" id="tier-bot">
+                        <div class="frosting-band"></div>
+                        <div class="drip" id="drip-bot"></div>
+                        <div class="pearl-row" id="pearls-bot"></div>
+                        <div class="dot-border" id="dots-bot"></div>
+                    </div>
+                </div>
+                <!-- /cake -->
+                <div class="plate"></div>
+            </div>
+            <!-- /cake-wrapper -->
+
+            <!-- Buttons -->
+            <div class="btn-row">
+                <button class="blow-btn" id="blow-btn">
+                    🌬️ Blow the Candles!
+                </button>
+                <button class="popper-btn" id="popper-btn">
+                    🎉 Party Poppers!
+                </button>
+            </div>
+
+            <!-- Candle counter -->
+            <div class="candle-counter" id="candle-counter"></div>
+
+            <!-- Birthday wish (shown after all candles blown) -->
+            <div class="wish" id="wish">
+                ✨ Wishing you a lifetime of laughter, love &amp; beautiful
+                moments, Vauju! May this year bring everything your heart
+                desires! 🌸💫🎂
+            </div>
+
+            <!-- Beating hearts -->
+            <div class="hearts">
+                <span class="heart">❤️</span>
+                <span class="heart">🧡</span>
+                <span class="heart">💛</span>
+            </div>
+
+            <div class="footer">Made with 💖 for Vauju's special day</div>
+        </div>
+        <!-- /scene -->
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
